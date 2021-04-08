@@ -1,7 +1,7 @@
 package allProblems;
 
 
-import util.PEConstants;
+import util.Constants;
 
 /*
 
@@ -28,8 +28,8 @@ public class ProjectEulerImpl3 implements ProjectEuler {
         long startTime = System.nanoTime ();
         long sum = 1;  // Special case for size 1
         //
-        if(PEConstants.SIZE %2 !=0) {
-            for (int n = 3; n <= PEConstants.SIZE; n += 2)
+        if(Constants.SIZE %2 !=0) {
+            for (int n = 3; n <= Constants.SIZE; n += 2)
                 sum += 4 * n * n - 6 * (n - 1);
 
             long endTime = System.nanoTime ();

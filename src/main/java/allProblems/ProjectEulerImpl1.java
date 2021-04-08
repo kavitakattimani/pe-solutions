@@ -7,15 +7,15 @@ package allProblems;
  */
 
 import util.Helpers;
-import util.PEConstants;
+import util.Constants;
 
 public class ProjectEulerImpl1 implements ProjectEuler {
 
     public String run() {
         long startTime = System.nanoTime ();
-        if(PEConstants.LIMIT >= 2) {
+        if(Constants.LIMIT >= 2) {
             int sum = 2;
-            for (int i = 3; i <= PEConstants.LIMIT; i++)
+            for (int i = 3; i <= Constants.LIMIT; i++)
                 if (Helpers.isPrime (i))
                     sum += i;
 
