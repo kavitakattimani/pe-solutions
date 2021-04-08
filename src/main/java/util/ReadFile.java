@@ -23,7 +23,7 @@ public class ReadFile {
                 Matcher matcher=testRegEx.matcher(line);
                 while(matcher.find()){
                     names.add(matcher.group());
-                    //System.out.println(matcher.group());
+                    System.out.println(matcher.group());
                 }
             }
             System.out.println("names list is "+ names);
