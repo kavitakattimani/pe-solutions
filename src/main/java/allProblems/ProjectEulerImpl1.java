@@ -1,28 +1,31 @@
 package allProblems;
 
  /*
- * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+   * The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
- * Find the sum of all the multiples of 3 or 5 below 1000.
- *
+   * Find the sum of all the primes below two million.
  */
 
-import util.peConstants;
+import util.Helpers;
+import util.PEConstants;
 
 public class ProjectEulerImpl1 implements ProjectEuler {
 
     public String run() {
         long startTime = System.nanoTime ();
-        int sum = 0;
-        for (int i = 0; i <= peConstants.LIMIT; i++)
-            //Check if the numbers are divisible by 3 or 5 and add to sum
-            if (i % 3 == 0 && i % 5 == 0)
-                sum += i;
-        long endTime = System.nanoTime ();
-        long durationInNano = (endTime - startTime);  //in millis
-        System.out.println ("\nTime Taken in nano" + durationInNano);
-        return Integer.toString (sum);
+        if(PEConstants.LIMIT >= 2) {
+            int sum = 2;
+            for (int i = 3; i <= PEConstants.LIMIT; i++)
+                if (Helpers.isPrime (i))
+                    sum += i;
 
+            long endTime = System.nanoTime ();
+            long durationInNano = (endTime - startTime);  //in millis
+            System.out.println ("\nTime Taken in nano" + durationInNano);
+            return Integer.toString (sum);
+        }
+        else
+            return ("Give positive numbers greater than 2- Invaild LIMIT");
     }
 }
 

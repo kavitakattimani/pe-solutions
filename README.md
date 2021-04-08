@@ -12,7 +12,7 @@ A sample of the output of each problem
 PE1
 -------
 Enter you choice to execute the Euler problem [1,2 or 3]
-1:PE-01 -> 	Multiples of 3 and 5
+1:PE-10 -> 	Summation of primes
 2:PE-22 -> 	Names scores
 3:PE-28 -> 	Number spiral diagonals
 4:Exit
@@ -20,8 +20,8 @@ Enter you choice to execute the Euler problem [1,2 or 3]
 1
 Problem choice made is: 1
 
-Time Taken in nano37561
-sum of all the multiples of 3 or 5 below 1000 is:33165
+Time Taken in nano462037257
+Summation of primes below two million is:1179908154
 
 PE2
 -----
@@ -52,4 +52,4 @@ Enter you choice to execute the Euler problem [1,2 or 3]
 Problem choice made is: 3
 
 Time Taken in nano12957
- sum of the numbers on the diagonals in a 1001 by 1001 spiral formed is:669171001
+sum of the numbers on the diagonals in a 1001 by 1001 spiral formed is:669171001

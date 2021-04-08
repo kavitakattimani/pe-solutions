@@ -25,20 +25,16 @@ public final class ProjectEulerImpl2 implements ProjectEuler {
         int sum = 0;
         System.out.println("\nSize of List is " + names.size ());
         for (int i = 0; i < names.size (); i++) {
-
             int value = 0;
             //Find each name sum by iterating through each char
             for (int j = 0; j < names.get(i).length (); j++)
                 value += names.get(i).charAt (j) - 'A' + 1;
             //Total sum calculated
             sum += value * (i + 1);
-
         }
         long endTime = System.nanoTime();
         long durationInNano = (endTime - startTime);  //in millis
         System.out.println ("\nTime Taken in nano"+ durationInNano);
         return Integer.toString (sum);
-
     }
-
 }

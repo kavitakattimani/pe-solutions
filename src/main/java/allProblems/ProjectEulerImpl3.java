@@ -1,9 +1,7 @@
 package allProblems;
 
 
-import util.peConstants;
-
-import static java.lang.Integer.SIZE;
+import util.PEConstants;
 
 /*
 
@@ -30,15 +28,19 @@ public class ProjectEulerImpl3 implements ProjectEuler {
         long startTime = System.nanoTime ();
         long sum = 1;  // Special case for size 1
         //
-        for (int n = 3; n <= peConstants.SIZE; n += 2)
-            sum += 4 * n * n - 6 * (n - 1);
+        if(PEConstants.SIZE %2 !=0) {
+            for (int n = 3; n <= PEConstants.SIZE; n += 2)
+                sum += 4 * n * n - 6 * (n - 1);
 
-        long endTime = System.nanoTime ();
-        long durationInNano = (endTime - startTime);  //in millis
-        System.out.println ("\nTime Taken in nano" + durationInNano);
-        return Long.toString (sum);
-
+            long endTime = System.nanoTime ();
+            long durationInNano = (endTime - startTime);  //in millis
+            System.out.println ("\nTime Taken in nano" + durationInNano);
+            return Long.toString (sum);
+        }
+        else
+        {
+            return ("Give odd numbers ex->1001 - Invalid SIZE");
+        }
     }
-
 }
 
